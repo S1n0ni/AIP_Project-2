@@ -9,8 +9,9 @@ router.get('/', function(req, res, next) {
 
 /* GET login/registration page. */
 router.get('/logreg', function(req, res, next) {
-res.render('logreg',{title: 'Вход'});
-  });
+res.render('logreg',{title: 'Вход', error: null});
+});
+
 
 /* POST login/registration page. */
 router.post('/logreg', async function(req, res, next) {
@@ -32,12 +33,11 @@ router.post('/logreg', async function(req, res, next) {
     //res.send("<h1>Пользователь найден</h1>");
     var foundUser = users[0];
     if(foundUser.checkPassword(password)){
-      req.session.user_id = foundUser._id
-      res.redirect('/')
-  } 
-  else {
-    res.render('logreg',{title: 'Вход'});
-  }
+    req.session.user_id = foundUser._id
+    res.redirect('/')
+    } else {
+    res.render('logreg',{title: 'Вход', error: 'Пароль не верный'});
+    }
   }
   });
 
