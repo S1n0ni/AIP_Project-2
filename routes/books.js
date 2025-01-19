@@ -10,7 +10,7 @@ router.get('/', function(req, res, next) {
 /*Страница книг */
 router.get("/:nick", async function(req, res, next) {
     var books = await Book.find({nick: req.params.nick});
-    console.log(books)
+    //console.log(books)
     if(!books.length) return next(new Error("Нет такой книги"))
     var book = books[0];
     res.render('book', {
