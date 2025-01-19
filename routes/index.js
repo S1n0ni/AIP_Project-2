@@ -19,7 +19,7 @@ router.get('/TheSeaOfMonsters', function(req, res, next) {
   });
 router.get('/TheTitansCurse', function(req, res, next) {
   res.render('book',{
-    title:"TheTitansCurse",
+    title:"Проклятье титана",
     picture:"images/Titan.jpg",
     desc: "Третья книга из пенталогии Рика Риордана 'Перси Джексон и Олимпийцы'"})
   });
