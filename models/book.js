@@ -14,4 +14,4 @@ type:Date,
 default:Date.now
 }
 })
-module.exports.Cat = mongoose.model("Book", bookSchema)
+module.exports.Book = mongoose.model("Book", bookSchema)
