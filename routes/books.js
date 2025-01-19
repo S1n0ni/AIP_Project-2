@@ -18,7 +18,5 @@ router.get("/:nick", async function(req, res, next) {
     picture: book.avatar,
     desc: book.desc
     })
-    });
-    
-
+});
 module.exports = router;
