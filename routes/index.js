@@ -6,12 +6,22 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 router.get('/TheLightningThief', function(req, res, next) {
-  res.send("<h1>Похититель молний'</h1>")
+  res.render('book',{
+    title:"Похититель молний",
+    picture:"images/Lightning.jpg",
+    desc:"Первая книга из пенталогии Рика Риордана 'Перси Джексон и Олимпийцы'"})
   });
 router.get('/TheSeaOfMonsters', function(req, res, next) {
-  res.send("<h1>Море чудовищ'</h1>")
+  res.render('book',{
+    title:"Море чудовищ",
+    picture:"images/Sea.jpg",
+    desc:"Вторая книга из пенталогии Рика Риордана 'Перси Джексон и Олимпийцы'"})
   });
 router.get('/TheTitansCurse', function(req, res, next) {
-  res.send("<h1>Проклятье титана'</h1>")
-  });  
+  res.render('book',{
+    title:"TheTitansCurse",
+    picture:"images/Titan.jpg",
+    desc: "Третья книга из пенталогии Рика Риордана 'Перси Джексон и Олимпийцы'"})
+  });
+router.get
 module.exports = router;
