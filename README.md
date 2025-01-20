@@ -22,12 +22,12 @@
 
 1. Клонируйте репозиторий:
    ```bash
-   git clone https://github.com/username/PercyJacksonPentalogy.git
+   git clone https://github.com/S1n0ni/AIP_Project-2.git
    ```
 
 2. Установите зависимости:
    ```bash
-   cd PercyJacksonPentalogy
+   cd AIP_Project-2
    npm install
    ```
 
